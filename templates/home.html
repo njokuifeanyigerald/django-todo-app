@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="container">
+    <h1 class="display-4 text-center"> TodoList </h1>
+    <hr class="my-4">
+        <a class="text-center text-capitalize" href="/todos/add_todo"> add todos</a>
+    <ul class="list-group">
+        {% for info in form %}
+            <li  class="list-group-item"><a href="{{ info.get_absolute_url }}">{{info.title }}</a> -- <button><a href="{{ info.get_edit_url }}">edit</a></button> |  <button> <a href="{{ info.get_delete_url }}">delete</a></button></li>
+        {% endfor %}
+
+    </ul>
+
+    </div>
+{% endblock %}

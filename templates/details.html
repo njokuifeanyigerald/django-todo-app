@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="container">
+    <h1 class="display-4 text-center"> TodoList </h1>
+    <hr class="my-4">
+
+    <h2 class="text-center">{{form.title  }}</h2>
+    <p class="text-center">{{form.text  }}</p>
+        <br>
+    <p class="text-center"> created on {{ form.created_at }}</p>
+        <button class="btn btn-outline-info"><a  href="/todos">Todo Home</a></button>
+    </div>
+{% endblock %}
